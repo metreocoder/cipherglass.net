@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cipherglass.net</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: white;
+      font-family: "Times New Roman", Times, serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin: 20px;
+      font-size: 72px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    p {
+      margin: 2px 20px 0 20px;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    .center-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .center-box label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .center-box input[type="text"] {
+      padding: 10px;
+      font-size: 18px;
+      font-family: "Times New Roman", Times, serif;
+      border: none;
+      border-bottom: 2px solid white;
+      background-color: transparent;
+      color: white;
+      width: 250px;
+      text-align: center;
+      outline: none;
+    }
+
+    .center-box input[type="text"]::placeholder {
+      color: gray;
+    }
+
+    .center-box button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      font-size: 16px;
+      font-family: "Times New Roman", Times, serif;
+      cursor: pointer;
+      background-color: #222;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .center-box button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>cipherglass</h1>
+  <p>welcome, user</p>
+
+  <div class="center-box">
+    <label for="input-box">enter unique identifier</label>
+    <input type="text" id="input-box" placeholder="type here">
+
+    <br><br>
+    <button onclick="goToInfo()">creator info</button>
+  </div>
+
+  <script>
+    const correctPassword = "thedeathlyhallows"; // Change as needed
+    const input = document.getElementById("input-box");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        if (input.value === correctPassword) {
+          window.open("file:///C:/Users/Xander/Desktop/thehint/xanderinfo.html", "_blank"); // Change URL
+        } else {
+          input.value = ""; // Clear input if incorrect
+        }
+      }
+    });
+
+    function goToInfo() {
+      window.open("file:///C:/Users/Xander/Desktop/thehint/info.html", "_blank"); // Change info link
+    }
+  </script>
+</body>
+</html>
